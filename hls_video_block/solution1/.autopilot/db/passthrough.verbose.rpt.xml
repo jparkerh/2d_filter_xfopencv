@@ -1,0 +1,153 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'passthrough'" level="0">
+<item name = "Date">Fri Nov 30 10:25:34 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">hls_video_block</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 3.676, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">779041, 779041, 779041, 779041, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- row_l">779040, 779040, 1082, -, -, 720, no</column>
+<column name=" + col_l">1080, 1080, 1, -, -, 1080, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 65, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 111, -</column>
+<column name="Register">-, -, 36, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_1_fu_204_p2">+, 0, 0, 17, 10, 1</column>
+<column name="j_1_fu_216_p2">+, 0, 0, 18, 11, 1</column>
+<column name="exitcond1_fu_198_p2">icmp, 0, 0, 13, 10, 10</column>
+<column name="exitcond_fu_210_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">21, 4, 1, 4</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="i_reg_176">9, 2, 10, 20</column>
+<column name="input_mat_data_strea_3_blk_n">9, 2, 1, 2</column>
+<column name="input_mat_data_strea_4_blk_n">9, 2, 1, 2</column>
+<column name="input_mat_data_strea_blk_n">9, 2, 1, 2</column>
+<column name="j_reg_187">9, 2, 11, 22</column>
+<column name="output_mat_data_stre_3_blk_n">9, 2, 1, 2</column>
+<column name="output_mat_data_stre_4_blk_n">9, 2, 1, 2</column>
+<column name="output_mat_data_stre_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_225">10, 0, 10, 0</column>
+<column name="i_reg_176">10, 0, 10, 0</column>
+<column name="j_reg_187">11, 0, 11, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, passthrough, return value</column>
+<column name="input_mat_data_strea_dout">in, 8, ap_fifo, input_mat_data_strea, pointer</column>
+<column name="input_mat_data_strea_empty_n">in, 1, ap_fifo, input_mat_data_strea, pointer</column>
+<column name="input_mat_data_strea_read">out, 1, ap_fifo, input_mat_data_strea, pointer</column>
+<column name="input_mat_data_strea_3_dout">in, 8, ap_fifo, input_mat_data_strea_3, pointer</column>
+<column name="input_mat_data_strea_3_empty_n">in, 1, ap_fifo, input_mat_data_strea_3, pointer</column>
+<column name="input_mat_data_strea_3_read">out, 1, ap_fifo, input_mat_data_strea_3, pointer</column>
+<column name="input_mat_data_strea_4_dout">in, 8, ap_fifo, input_mat_data_strea_4, pointer</column>
+<column name="input_mat_data_strea_4_empty_n">in, 1, ap_fifo, input_mat_data_strea_4, pointer</column>
+<column name="input_mat_data_strea_4_read">out, 1, ap_fifo, input_mat_data_strea_4, pointer</column>
+<column name="output_mat_data_stre_din">out, 8, ap_fifo, output_mat_data_stre, pointer</column>
+<column name="output_mat_data_stre_full_n">in, 1, ap_fifo, output_mat_data_stre, pointer</column>
+<column name="output_mat_data_stre_write">out, 1, ap_fifo, output_mat_data_stre, pointer</column>
+<column name="output_mat_data_stre_3_din">out, 8, ap_fifo, output_mat_data_stre_3, pointer</column>
+<column name="output_mat_data_stre_3_full_n">in, 1, ap_fifo, output_mat_data_stre_3, pointer</column>
+<column name="output_mat_data_stre_3_write">out, 1, ap_fifo, output_mat_data_stre_3, pointer</column>
+<column name="output_mat_data_stre_4_din">out, 8, ap_fifo, output_mat_data_stre_4, pointer</column>
+<column name="output_mat_data_stre_4_full_n">in, 1, ap_fifo, output_mat_data_stre_4, pointer</column>
+<column name="output_mat_data_stre_4_write">out, 1, ap_fifo, output_mat_data_stre_4, pointer</column>
+</table>
+</item>
+</section>
+</profile>

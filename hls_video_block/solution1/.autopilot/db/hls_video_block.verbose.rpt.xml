@@ -1,0 +1,137 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'hls_video_block'" level="0">
+<item name = "Date">Fri Nov 30 10:25:35 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">hls_video_block</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 3.676, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">782643, 782643, 782644, 782644, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 782643, 782643, 782643, 782643, none</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 780481, 780481, 780481, 780481, none</column>
+<column name="passthrough_U0">passthrough, 779041, 779041, 779041, 779041, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">0, -, 30, 120, -</column>
+<column name="Instance">-, -, 435, 1002, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 264, 458</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 135, 368</column>
+<column name="passthrough_U0">passthrough, 0, 0, 36, 176</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="input_mat_data_strea_5_U">0, 5, 20, 2, 8, 16</column>
+<column name="input_mat_data_strea_6_U">0, 5, 20, 2, 8, 16</column>
+<column name="input_mat_data_strea_U">0, 5, 20, 2, 8, 16</column>
+<column name="output_mat_data_stre_5_U">0, 5, 20, 2, 8, 16</column>
+<column name="output_mat_data_stre_6_U">0, 5, 20, 2, 8, 16</column>
+<column name="output_mat_data_stre_U">0, 5, 20, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="INPUT_STREAM_TDATA">in, 32, axis, VIDEO_IN_V_data_V, pointer</column>
+<column name="INPUT_STREAM_TKEEP">in, 4, axis, VIDEO_IN_V_keep_V, pointer</column>
+<column name="INPUT_STREAM_TSTRB">in, 4, axis, VIDEO_IN_V_strb_V, pointer</column>
+<column name="INPUT_STREAM_TUSER">in, 1, axis, VIDEO_IN_V_user_V, pointer</column>
+<column name="INPUT_STREAM_TLAST">in, 1, axis, VIDEO_IN_V_last_V, pointer</column>
+<column name="INPUT_STREAM_TID">in, 1, axis, VIDEO_IN_V_id_V, pointer</column>
+<column name="INPUT_STREAM_TDEST">in, 1, axis, VIDEO_IN_V_dest_V, pointer</column>
+<column name="INPUT_STREAM_TVALID">in, 1, axis, VIDEO_IN_V_dest_V, pointer</column>
+<column name="INPUT_STREAM_TREADY">out, 1, axis, VIDEO_IN_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TDATA">out, 32, axis, VIDEO_OUT_V_data_V, pointer</column>
+<column name="OUTPUT_STREAM_TKEEP">out, 4, axis, VIDEO_OUT_V_keep_V, pointer</column>
+<column name="OUTPUT_STREAM_TSTRB">out, 4, axis, VIDEO_OUT_V_strb_V, pointer</column>
+<column name="OUTPUT_STREAM_TUSER">out, 1, axis, VIDEO_OUT_V_user_V, pointer</column>
+<column name="OUTPUT_STREAM_TLAST">out, 1, axis, VIDEO_OUT_V_last_V, pointer</column>
+<column name="OUTPUT_STREAM_TID">out, 1, axis, VIDEO_OUT_V_id_V, pointer</column>
+<column name="OUTPUT_STREAM_TDEST">out, 1, axis, VIDEO_OUT_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TVALID">out, 1, axis, VIDEO_OUT_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TREADY">in, 1, axis, VIDEO_OUT_V_dest_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, hls_video_block, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, hls_video_block, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, hls_video_block, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, hls_video_block, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, hls_video_block, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, hls_video_block, return value</column>
+</table>
+</item>
+</section>
+</profile>

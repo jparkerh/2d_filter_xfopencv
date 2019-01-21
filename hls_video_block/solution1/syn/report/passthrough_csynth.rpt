@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vivado HLS Report for 'passthrough'
+================================================================
+* Date:           Fri Nov 30 10:25:34 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        hls_video_block
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.676|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  779041|  779041|  779041|  779041|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+------+----------+
+        |- row_l   |  779040|  779040|      1082|          -|          -|   720|    no    |
+        | + col_l  |    1080|    1080|         1|          -|          -|  1080|    no    |
+        +----------+--------+--------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      65|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     111|    -|
+|Register         |        -|      -|      36|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      36|     176|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |i_1_fu_204_p2        |     +    |      0|  0|  17|          10|           1|
+    |j_1_fu_216_p2        |     +    |      0|  0|  18|          11|           1|
+    |exitcond1_fu_198_p2  |   icmp   |      0|  0|  13|          10|          10|
+    |exitcond_fu_210_p2   |   icmp   |      0|  0|  13|          11|          11|
+    |ap_block_state1      |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3      |    or    |      0|  0|   2|           1|           1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0|  65|          44|          25|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  21|          4|    1|          4|
+    |ap_done                       |   9|          2|    1|          2|
+    |i_reg_176                     |   9|          2|   10|         20|
+    |input_mat_data_strea_3_blk_n  |   9|          2|    1|          2|
+    |input_mat_data_strea_4_blk_n  |   9|          2|    1|          2|
+    |input_mat_data_strea_blk_n    |   9|          2|    1|          2|
+    |j_reg_187                     |   9|          2|   11|         22|
+    |output_mat_data_stre_3_blk_n  |   9|          2|    1|          2|
+    |output_mat_data_stre_4_blk_n  |   9|          2|    1|          2|
+    |output_mat_data_stre_blk_n    |   9|          2|    1|          2|
+    |real_start                    |   9|          2|    1|          2|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         | 111|         24|   30|         62|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |ap_CS_fsm       |   3|   0|    3|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |i_1_reg_225     |  10|   0|   10|          0|
+    |i_reg_176       |  10|   0|   10|          0|
+    |j_reg_187       |  11|   0|   11|          0|
+    |start_once_reg  |   1|   0|    1|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           |  36|   0|   36|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++--------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                          |  in |    1| ap_ctrl_hs |       passthrough      | return value |
+|ap_rst                          |  in |    1| ap_ctrl_hs |       passthrough      | return value |
+|ap_start                        |  in |    1| ap_ctrl_hs |       passthrough      | return value |
+|start_full_n                    |  in |    1| ap_ctrl_hs |       passthrough      | return value |
+|ap_done                         | out |    1| ap_ctrl_hs |       passthrough      | return value |
+|ap_continue                     |  in |    1| ap_ctrl_hs |       passthrough      | return value |
+|ap_idle                         | out |    1| ap_ctrl_hs |       passthrough      | return value |
+|ap_ready                        | out |    1| ap_ctrl_hs |       passthrough      | return value |
+|start_out                       | out |    1| ap_ctrl_hs |       passthrough      | return value |
+|start_write                     | out |    1| ap_ctrl_hs |       passthrough      | return value |
+|input_mat_data_strea_dout       |  in |    8|   ap_fifo  |  input_mat_data_strea  |    pointer   |
+|input_mat_data_strea_empty_n    |  in |    1|   ap_fifo  |  input_mat_data_strea  |    pointer   |
+|input_mat_data_strea_read       | out |    1|   ap_fifo  |  input_mat_data_strea  |    pointer   |
+|input_mat_data_strea_3_dout     |  in |    8|   ap_fifo  | input_mat_data_strea_3 |    pointer   |
+|input_mat_data_strea_3_empty_n  |  in |    1|   ap_fifo  | input_mat_data_strea_3 |    pointer   |
+|input_mat_data_strea_3_read     | out |    1|   ap_fifo  | input_mat_data_strea_3 |    pointer   |
+|input_mat_data_strea_4_dout     |  in |    8|   ap_fifo  | input_mat_data_strea_4 |    pointer   |
+|input_mat_data_strea_4_empty_n  |  in |    1|   ap_fifo  | input_mat_data_strea_4 |    pointer   |
+|input_mat_data_strea_4_read     | out |    1|   ap_fifo  | input_mat_data_strea_4 |    pointer   |
+|output_mat_data_stre_din        | out |    8|   ap_fifo  |  output_mat_data_stre  |    pointer   |
+|output_mat_data_stre_full_n     |  in |    1|   ap_fifo  |  output_mat_data_stre  |    pointer   |
+|output_mat_data_stre_write      | out |    1|   ap_fifo  |  output_mat_data_stre  |    pointer   |
+|output_mat_data_stre_3_din      | out |    8|   ap_fifo  | output_mat_data_stre_3 |    pointer   |
+|output_mat_data_stre_3_full_n   |  in |    1|   ap_fifo  | output_mat_data_stre_3 |    pointer   |
+|output_mat_data_stre_3_write    | out |    1|   ap_fifo  | output_mat_data_stre_3 |    pointer   |
+|output_mat_data_stre_4_din      | out |    8|   ap_fifo  | output_mat_data_stre_4 |    pointer   |
+|output_mat_data_stre_4_full_n   |  in |    1|   ap_fifo  | output_mat_data_stre_4 |    pointer   |
+|output_mat_data_stre_4_write    | out |    1|   ap_fifo  | output_mat_data_stre_4 |    pointer   |
++--------------------------------+-----+-----+------------+------------------------+--------------+
+

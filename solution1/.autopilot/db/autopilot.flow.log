@@ -1,0 +1,1256 @@
+INFO-FLOW: Workspace /group/techsup/parkerh/hls_video_block/solution1 opened at Sun Dec 16 17:12:51 PST 2018
+Execute     config_clock -quiet -name default -period 3 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3ns.
+Execute     config_clock -quiet -name default -uncertainty 0.3 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.3ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.15 sec.
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.16 sec.
+Command     ap_source done; 0.16 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu7ev 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.37 sec.
+Execute   set_part xczu7ev-ffvc1156-2-e 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute       get_default_platform 
+Execute       license_isbetapart xczu7ev 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 3 -name default 
+Execute     config_clock -quiet -name default -period 3 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3ns.
+Execute   set_clock_uncertainty 0.3 
+Execute   source ./hls_video_block/solution1/directives.tcl 
+Execute     set_directive_pipeline blue_only/col_l 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline red_only/col_l 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'hls_video_block/hls_video_block.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling hls_video_block/hls_video_block.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted hls_video_block/hls_video_block.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "hls_video_block/hls_video_block.cpp"   -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot" -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp" 
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E hls_video_block/hls_video_block.cpp -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp
+Command       clang done; 2.17 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc" -hls  -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot" -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp"  -o "/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc -hls -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/useless.bc
+Command       clang done; 4.96 sec.
+INFO-FLOW: GCC PP time: 7 seconds per iteration
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp std=c++0x -directive=/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 6.08 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp std=c++0x -directive=/group/techsup/parkerh/hls_video_block/solution1/solution1.json 
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/group/techsup/parkerh/hls_video_block/solution1/solution1.json -quiet -fix-errors /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 5.81 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/xilinx-dataflow-lawyer.hls_video_block.pp.0.cpp.diag.yml /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/xilinx-dataflow-lawyer.hls_video_block.pp.0.cpp.out.log 2> /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/xilinx-dataflow-lawyer.hls_video_block.pp.0.cpp.err.log 
+Command       ap_eval done; 4.76 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp std=c++0x 
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 16.17 sec.
+INFO-FLOW: tidy-3.1 time 26 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.1.cpp std=c++0x 
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.1.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 8.63 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.1.cpp"   -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot" -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.2.cpp" 
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.1.cpp -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.2.cpp
+Command       clang done; 2.14 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.2.cpp"  -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot" -I "/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.bc" 
+INFO-FLOW: exec /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /proj/gsd/vivado/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.pragma.2.cpp -D__XFCV_HLS_MODE__ -I./include -I./include/src --std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot -I /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.bc
+Command       clang done; 5.54 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.g.bc -hls-opt -except-internalize hls_video_block -L/proj/gsd/vivado/Vivado/2018.2/lnx64/lib -lhlsm -lhlsmc++ -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.26 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 465.980 ; gain = 0.148 ; free physical = 67691 ; free virtual = 207083
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 465.980 ; gain = 0.148 ; free physical = 67691 ; free virtual = 207083
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.pp.bc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.18 sec.
+Execute         llvm-ld /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/proj/gsd/vivado/Vivado/2018.2/lnx64/lib -lfloatconversion -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.17 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top hls_video_block -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.0.bc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:646) in function 'hls::Mat<720, 1280, 0>::write(hls::Scalar<1, unsigned char>)' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::Mat<720, 1280, 0>::read()' completely.
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::init' into 'hls::Mat<720, 1280, 4096>::Mat.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 0>::init' into 'hls::Mat<720, 1280, 0>::Mat.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<24, unsigned char>.1' into 'hls::AXIGetBitFields<24, unsigned char>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:71).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<24, unsigned char>' into 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:92).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::write' into 'hls::Mat<720, 1280, 4096>::operator<<' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator<<' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator<<' into 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:94).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::read' into 'hls::Mat<720, 1280, 4096>::operator>>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator>>' into 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:140).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator>>' into 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1950).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::quantization_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::ap_fixed_base<35, 13, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::ap_fixed_base<35, 13, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'hls::ColorConverter<unsigned char, unsigned char>::convert<3>' into 'hls::kernel_CvtColor<HLS_RGB2GRAY, unsigned char, unsigned char>::apply<3, 1>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1525).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 0>::write' into 'hls::Mat<720, 1280, 0>::operator<<' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 0>::operator<<' into 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 0>::operator<<' into 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:52).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 0>::read' into 'hls::Mat<720, 1280, 0>::operator>>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 0>::operator>>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1950).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 0>::operator>>' into 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:36).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<1, unsigned char> >::shift_pixels_left' into 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:40).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<1, unsigned char> >::insert_pixel' into 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:41).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<1, unsigned char> >::insert_pixel' into 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:42).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<1, unsigned char> >::insert_pixel' into 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:43).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<1, unsigned char> >::getval' into 'sobel_operator' (hls_video_block/hls_video_block.cpp:107).
+INFO: [XFORM 203-603] Inlining function 'hls::kernel_CvtColor<HLS_GRAY2RGB, unsigned char, unsigned char>::apply<1, 3>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1951).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<24, unsigned char>.1' into 'hls::AXISetBitFields<24, unsigned char>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:100).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<24, unsigned char>' into 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:143).
+Command         transform done; 0.66 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 595.453 ; gain = 129.621 ; free physical = 67651 ; free virtual = 207048
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.1.bc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<35, 13, (ap_q_mode)5, (ap_o_mode)3>' into 'hls::sr_cast<unsigned char, ap_fixed<35, 13, (ap_q_mode)5, (ap_o_mode)3, 0> >' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::kernel_CvtColor<HLS_RGB2GRAY, unsigned char, unsigned char>::apply<3, 1>' into 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1951) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::abs' into 'sobel_operator' (hls_video_block/hls_video_block.cpp:113) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<8>' into 'hls::sr_cast_class<ap_uint<8> >::operator()' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:432) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()' into 'hls::sr_cast<unsigned char, unsigned char>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, unsigned char>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1534->/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1951) automatically.
+Command         transform done; 0.51 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.2.prechk.bc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:78: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command         transform done; 0.17 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 595.453 ; gain = 129.621 ; free physical = 67623 ; free virtual = 207023
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.g.1.bc to /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.o.1.bc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'im_2.data_stream.V' (hls_video_block/hls_video_block.cpp:71).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'im_1.data_stream.V' (hls_video_block/hls_video_block.cpp:70).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'output_mat.data_stream.V' (hls_video_block/hls_video_block.cpp:72).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'input_mat.data_stream.V' (hls_video_block/hls_video_block.cpp:69).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sobel_operator' (hls_video_block/hls_video_block.cpp:87).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L2' (hls_video_block/hls_video_block.cpp:32) in function 'hls_2DFilter' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:126) in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1947) in function 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1947) in function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:73) in function 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'hor_conv' (hls_video_block/hls_video_block.cpp:103) in function 'sobel_operator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'ver_conv' (hls_video_block/hls_video_block.cpp:105) in function 'sobel_operator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:123) in function 'hls_2DFilter' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:125) in function 'hls_2DFilter' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.2' (hls_video_block/hls_video_block.cpp:54) in function 'hls_2DFilter' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_channels' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:142) in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:646) in function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_channels' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:91) in function 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.2' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:646) in function 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' completely.
+INFO: [XFORM 203-102] Partitioning array 's.val.assign' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:563) automatically.
+INFO: [XFORM 203-102] Partitioning array 's.val.assign' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:563) automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'input_mat.data_stream.V' (hls_video_block/hls_video_block.cpp:69) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'im_1.data_stream.V' (hls_video_block/hls_video_block.cpp:70) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'im_2.data_stream.V' (hls_video_block/hls_video_block.cpp:71) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'output_mat.data_stream.V' (hls_video_block/hls_video_block.cpp:72) .
+INFO: [XFORM 203-101] Partitioning array 'temp_pixel.val' (hls_video_block/hls_video_block.cpp:88) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IN_WINDOW.val.val' (hls_video_block/hls_video_block.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ip_pixel.val' (hls_video_block/hls_video_block.cpp:23) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sp_pixel.val' (hls_video_block/hls_video_block.cpp:24) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.val' (hls_video_block/hls_video_block.cpp:26) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:615) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:115) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:615) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kernel_opr.par.val.V' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1939) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array '_s.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1944) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array '_d.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1945) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:615) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array '_s.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1944) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array '_d.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1945) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:615) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:56) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'input_mat.data_stream.V' (hls_video_block/hls_video_block.cpp:69) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'im_1.data_stream.V' (hls_video_block/hls_video_block.cpp:70) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'im_2.data_stream.V' (hls_video_block/hls_video_block.cpp:71) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'output_mat.data_stream.V' (hls_video_block/hls_video_block.cpp:72) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IN_WINDOW.val.val' (hls_video_block/hls_video_block.cpp:22) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.val' (hls_video_block/hls_video_block.cpp:26) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'IN_WINDOW.val.val' (hls_video_block/hls_video_block.cpp:22) in dimension 3 completely.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<35, 13, (ap_q_mode)5, (ap_o_mode)3>' into 'hls::sr_cast<unsigned char, ap_fixed<35, 13, (ap_q_mode)5, (ap_o_mode)3, 0> >' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, ap_fixed<35, 13, (ap_q_mode)5, (ap_o_mode)3, 0> >' into 'hls::kernel_CvtColor<HLS_RGB2GRAY, unsigned char, unsigned char>::apply<3, 1>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1478->/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1525) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::kernel_CvtColor<HLS_RGB2GRAY, unsigned char, unsigned char>::apply<3, 1>' into 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1951) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::abs' into 'sobel_operator' (hls_video_block/hls_video_block.cpp:113) automatically.
+INFO: [XFORM 203-602] Inlining function 'sobel_operator' into 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<8>' into 'hls::sr_cast_class<ap_uint<8> >::operator()' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:432) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()' into 'hls::sr_cast<unsigned char, unsigned char>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, unsigned char>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1534->/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1951) automatically.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'hls_video_block', detected/extracted 6 process function(s): 
+	 'Block__proc'
+	 'hls::AXIvideo2Mat<24, 720, 1280, 4096>'
+	 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>'
+	 'hls_2DFilter'
+	 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>'
+	 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
+Command         transform done; 1.65 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.o.1.tmp.bc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (hls_video_block/hls_video_block.cpp:32:3) to (hls_video_block/hls_video_block.cpp:31:35) in function 'hls_2DFilter'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1947:48) to (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1947:42) in function 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>'... converting 7 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'hls_2DFilter' (hls_video_block/hls_video_block.cpp:21)...3 expression(s) balanced.
+Command         transform done; 0.68 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 659.328 ; gain = 193.496 ; free physical = 67576 ; free virtual = 206981
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.o.2.bc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' to 'Mat2AXIvideo' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:78:50)
+WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor<HLS_RGB2GRAY, 4096, 0, 720, 1280>' to 'CvtColor' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:409:39)
+WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' to 'CvtColor.1' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:617:42)
+WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' to 'AXIvideo2Mat' (/proj/gsd/vivado/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:49:9)
+Command         transform done; 0.99 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 659.328 ; gain = 193.496 ; free physical = 67516 ; free virtual = 206922
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 6.13 sec.
+Command     elaborate done; 64.53 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'hls_video_block' ...
+Execute       ap_set_top_model hls_video_block 
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'CvtColor.1' to 'CvtColor_1'.
+Execute       get_model_list hls_video_block -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model hls_video_block 
+Execute       preproc_iomode -model Mat2AXIvideo 
+Execute       preproc_iomode -model CvtColor.1 
+Execute       preproc_iomode -model hls_2DFilter 
+Execute       preproc_iomode -model CvtColor 
+Execute       preproc_iomode -model AXIvideo2Mat 
+Execute       preproc_iomode -model Block__proc 
+Execute       get_model_list hls_video_block -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block
+INFO-FLOW: Configuring Module : Block__proc ...
+Execute       set_default_model Block__proc 
+Execute       apply_spec_resource_limit Block__proc 
+INFO-FLOW: Configuring Module : AXIvideo2Mat ...
+Execute       set_default_model AXIvideo2Mat 
+Execute       apply_spec_resource_limit AXIvideo2Mat 
+INFO-FLOW: Configuring Module : CvtColor ...
+Execute       set_default_model CvtColor 
+Execute       apply_spec_resource_limit CvtColor 
+INFO-FLOW: Configuring Module : hls_2DFilter ...
+Execute       set_default_model hls_2DFilter 
+Execute       apply_spec_resource_limit hls_2DFilter 
+INFO-FLOW: Configuring Module : CvtColor.1 ...
+Execute       set_default_model CvtColor.1 
+Execute       apply_spec_resource_limit CvtColor.1 
+INFO-FLOW: Configuring Module : Mat2AXIvideo ...
+Execute       set_default_model Mat2AXIvideo 
+Execute       apply_spec_resource_limit Mat2AXIvideo 
+INFO-FLOW: Configuring Module : hls_video_block ...
+Execute       set_default_model hls_video_block 
+Execute       apply_spec_resource_limit hls_video_block 
+INFO-FLOW: Model list for preprocess: Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block
+INFO-FLOW: Preprocessing Module: Block__proc ...
+Execute       set_default_model Block__proc 
+Execute       cdfg_preprocess -model Block__proc 
+Execute       rtl_gen_preprocess Block__proc 
+INFO-FLOW: Preprocessing Module: AXIvideo2Mat ...
+Execute       set_default_model AXIvideo2Mat 
+Execute       cdfg_preprocess -model AXIvideo2Mat 
+Execute       rtl_gen_preprocess AXIvideo2Mat 
+INFO-FLOW: Preprocessing Module: CvtColor ...
+Execute       set_default_model CvtColor 
+Execute       cdfg_preprocess -model CvtColor 
+Execute       rtl_gen_preprocess CvtColor 
+INFO-FLOW: Preprocessing Module: hls_2DFilter ...
+Execute       set_default_model hls_2DFilter 
+Execute       cdfg_preprocess -model hls_2DFilter 
+Execute       rtl_gen_preprocess hls_2DFilter 
+INFO-FLOW: Preprocessing Module: CvtColor.1 ...
+Execute       set_default_model CvtColor.1 
+Execute       cdfg_preprocess -model CvtColor.1 
+Execute       rtl_gen_preprocess CvtColor.1 
+INFO-FLOW: Preprocessing Module: Mat2AXIvideo ...
+Execute       set_default_model Mat2AXIvideo 
+Execute       cdfg_preprocess -model Mat2AXIvideo 
+Execute       rtl_gen_preprocess Mat2AXIvideo 
+INFO-FLOW: Preprocessing Module: hls_video_block ...
+Execute       set_default_model hls_video_block 
+Execute       cdfg_preprocess -model hls_video_block 
+Execute       rtl_gen_preprocess hls_video_block 
+INFO-FLOW: Model list for synthesis: Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Block__proc 
+Execute       schedule -model Block__proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 65.79 seconds; current allocated memory: 207.865 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling Block__proc.
+Execute       set_default_model Block__proc 
+Execute       bind -model Block__proc 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Block__proc
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 207.919 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.bind.adb -f 
+INFO-FLOW: Finish binding Block__proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model AXIvideo2Mat 
+Execute       schedule -model AXIvideo2Mat 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.3 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 208.273 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.verbose.sched.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.sched.adb -f 
+INFO-FLOW: Finish scheduling AXIvideo2Mat.
+Execute       set_default_model AXIvideo2Mat 
+Execute       bind -model AXIvideo2Mat 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=AXIvideo2Mat
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 208.753 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.verbose.bind.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.bind.adb -f 
+INFO-FLOW: Finish binding AXIvideo2Mat.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'CvtColor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model CvtColor 
+Execute       schedule -model CvtColor 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.26 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 209.104 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.sched.adb -f 
+INFO-FLOW: Finish scheduling CvtColor.
+Execute       set_default_model CvtColor 
+Execute       bind -model CvtColor 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=CvtColor
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 209.354 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.bind.adb -f 
+INFO-FLOW: Finish binding CvtColor.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_2DFilter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model hls_2DFilter 
+Execute       schedule -model hls_2DFilter 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 209.734 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.sched.adb -f 
+INFO-FLOW: Finish scheduling hls_2DFilter.
+Execute       set_default_model hls_2DFilter 
+Execute       bind -model hls_2DFilter 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=hls_2DFilter
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 210.047 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.bind.adb -f 
+INFO-FLOW: Finish binding hls_2DFilter.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'CvtColor_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model CvtColor.1 
+Execute       schedule -model CvtColor.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.19 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 210.216 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.sched.adb -f 
+INFO-FLOW: Finish scheduling CvtColor.1.
+Execute       set_default_model CvtColor.1 
+Execute       bind -model CvtColor.1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=CvtColor.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 210.354 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.bind.adb -f 
+INFO-FLOW: Finish binding CvtColor.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mat2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Mat2AXIvideo 
+Execute       schedule -model Mat2AXIvideo 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.15 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 210.561 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.sched.adb -f 
+INFO-FLOW: Finish scheduling Mat2AXIvideo.
+Execute       set_default_model Mat2AXIvideo 
+Execute       bind -model Mat2AXIvideo 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Mat2AXIvideo
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 210.748 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.bind.adb -f 
+INFO-FLOW: Finish binding Mat2AXIvideo.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_video_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model hls_video_block 
+Execute       schedule -model hls_video_block 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 210.930 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.sched.adb -f 
+INFO-FLOW: Finish scheduling hls_video_block.
+Execute       set_default_model hls_video_block 
+Execute       bind -model hls_video_block 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=hls_video_block
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.27 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 211.312 MB.
+Execute       report -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.verbose.bind.rpt -verbose -f 
+Command       report done; 0.13 sec.
+Execute       db_write -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.bind.adb -f 
+INFO-FLOW: Finish binding hls_video_block.
+Execute       get_model_list hls_video_block -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Block__proc 
+Execute       rtl_gen_preprocess AXIvideo2Mat 
+Execute       rtl_gen_preprocess CvtColor 
+Execute       rtl_gen_preprocess hls_2DFilter 
+Execute       rtl_gen_preprocess CvtColor.1 
+Execute       rtl_gen_preprocess Mat2AXIvideo 
+Execute       rtl_gen_preprocess hls_video_block 
+INFO-FLOW: Model list for RTL generation: Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Block__proc -vendor xilinx -mg_file /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 211.556 MB.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Block__proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /group/techsup/parkerh/hls_video_block/solution1/syn/systemc/Block_proc -synmodules Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block 
+Execute       gen_rtl Block__proc -style xilinx -f -lang vhdl -o /group/techsup/parkerh/hls_video_block/solution1/syn/vhdl/Block_proc 
+Execute       gen_rtl Block__proc -style xilinx -f -lang vlog -o /group/techsup/parkerh/hls_video_block/solution1/syn/verilog/Block_proc 
+Execute       gen_tb_info Block__proc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc -p /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db 
+Execute       report -model Block__proc -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/Block_proc_csynth.rpt -f 
+Execute       report -model Block__proc -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/Block_proc_csynth.xml -f -x 
+Execute       report -model Block__proc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.verbose.rpt -verbose -f 
+Execute       db_write -model Block__proc -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model AXIvideo2Mat -vendor xilinx -mg_file /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2Mat'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 212.884 MB.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /group/techsup/parkerh/hls_video_block/solution1/syn/systemc/AXIvideo2Mat -synmodules Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vhdl -o /group/techsup/parkerh/hls_video_block/solution1/syn/vhdl/AXIvideo2Mat 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vlog -o /group/techsup/parkerh/hls_video_block/solution1/syn/verilog/AXIvideo2Mat 
+Execute       gen_tb_info AXIvideo2Mat -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat -p /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db 
+Execute       report -model AXIvideo2Mat -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/AXIvideo2Mat_csynth.rpt -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       report -model AXIvideo2Mat -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/AXIvideo2Mat_csynth.xml -f -x 
+Execute       report -model AXIvideo2Mat -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.verbose.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       db_write -model AXIvideo2Mat -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'CvtColor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model CvtColor -vendor xilinx -mg_file /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'hls_video_block_mul_mul_8ns_22ns_29_1_1' to 'hls_video_block_mbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hls_video_block_mac_muladd_8ns_20ns_29ns_29_1_1' to 'hls_video_block_mcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hls_video_block_mac_muladd_8ns_23ns_29ns_30_1_1' to 'hls_video_block_mdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'hls_video_block_mbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hls_video_block_mcud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hls_video_block_mdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'CvtColor'.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 214.604 MB.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       gen_rtl CvtColor -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /group/techsup/parkerh/hls_video_block/solution1/syn/systemc/CvtColor -synmodules Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block 
+Execute       gen_rtl CvtColor -style xilinx -f -lang vhdl -o /group/techsup/parkerh/hls_video_block/solution1/syn/vhdl/CvtColor 
+Execute       gen_rtl CvtColor -style xilinx -f -lang vlog -o /group/techsup/parkerh/hls_video_block/solution1/syn/verilog/CvtColor 
+Execute       gen_tb_info CvtColor -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor -p /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db 
+Execute       report -model CvtColor -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/CvtColor_csynth.rpt -f 
+Execute       report -model CvtColor -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/CvtColor_csynth.xml -f -x 
+Execute       report -model CvtColor -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.verbose.rpt -verbose -f 
+Execute       db_write -model CvtColor -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_2DFilter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model hls_2DFilter -vendor xilinx -mg_file /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'hls_2DFilter_line_buffer_0_0_va' to 'hls_2DFilter_lineeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hls_2DFilter_line_buffer_1_0_va' to 'hls_2DFilter_linefYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_2DFilter'.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 216.120 MB.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       gen_rtl hls_2DFilter -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /group/techsup/parkerh/hls_video_block/solution1/syn/systemc/hls_2DFilter -synmodules Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block 
+Execute       gen_rtl hls_2DFilter -style xilinx -f -lang vhdl -o /group/techsup/parkerh/hls_video_block/solution1/syn/vhdl/hls_2DFilter 
+Execute       gen_rtl hls_2DFilter -style xilinx -f -lang vlog -o /group/techsup/parkerh/hls_video_block/solution1/syn/verilog/hls_2DFilter 
+Execute       gen_tb_info hls_2DFilter -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter -p /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db 
+Execute       report -model hls_2DFilter -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/hls_2DFilter_csynth.rpt -f 
+Execute       report -model hls_2DFilter -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/hls_2DFilter_csynth.xml -f -x 
+Execute       report -model hls_2DFilter -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.verbose.rpt -verbose -f 
+Command       report done; 0.11 sec.
+Execute       db_write -model hls_2DFilter -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'CvtColor_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model CvtColor.1 -vendor xilinx -mg_file /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'CvtColor_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 217.730 MB.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       gen_rtl CvtColor.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /group/techsup/parkerh/hls_video_block/solution1/syn/systemc/CvtColor_1 -synmodules Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block 
+Execute       gen_rtl CvtColor.1 -style xilinx -f -lang vhdl -o /group/techsup/parkerh/hls_video_block/solution1/syn/vhdl/CvtColor_1 
+Execute       gen_rtl CvtColor.1 -style xilinx -f -lang vlog -o /group/techsup/parkerh/hls_video_block/solution1/syn/verilog/CvtColor_1 
+Execute       gen_tb_info CvtColor.1 -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1 -p /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db 
+Execute       report -model CvtColor.1 -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/CvtColor_1_csynth.rpt -f 
+Execute       report -model CvtColor.1 -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/CvtColor_1_csynth.xml -f -x 
+Execute       report -model CvtColor.1 -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.verbose.rpt -verbose -f 
+Execute       db_write -model CvtColor.1 -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Mat2AXIvideo -vendor xilinx -mg_file /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2AXIvideo'.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 219.086 MB.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /group/techsup/parkerh/hls_video_block/solution1/syn/systemc/Mat2AXIvideo -synmodules Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vhdl -o /group/techsup/parkerh/hls_video_block/solution1/syn/vhdl/Mat2AXIvideo 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vlog -o /group/techsup/parkerh/hls_video_block/solution1/syn/verilog/Mat2AXIvideo 
+Execute       gen_tb_info Mat2AXIvideo -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo -p /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db 
+Execute       report -model Mat2AXIvideo -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/Mat2AXIvideo_csynth.rpt -f 
+Execute       report -model Mat2AXIvideo -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/Mat2AXIvideo_csynth.xml -f -x 
+Execute       report -model Mat2AXIvideo -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.verbose.rpt -verbose -f 
+Execute       db_write -model Mat2AXIvideo -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_video_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model hls_video_block -vendor xilinx -mg_file /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_IN_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_IN_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_IN_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_IN_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_IN_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_IN_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_IN_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_OUT_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_OUT_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_OUT_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_OUT_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_OUT_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_OUT_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_video_block/VIDEO_OUT_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'hls_video_block' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'start_for_CvtColor_U0' to 'start_for_CvtColog8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_hls_2DFilter_U0' to 'start_for_hls_2DFhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_CvtColor_1_U0' to 'start_for_CvtColoibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Mat2AXIvideo_U0' to 'start_for_Mat2AXIjbC' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_video_block'.
+Command       create_rtl_model done; 0.24 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 220.625 MB.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       gen_rtl hls_video_block -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /group/techsup/parkerh/hls_video_block/solution1/syn/systemc/hls_video_block -synmodules Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block 
+Execute       gen_rtl hls_video_block -istop -style xilinx -f -lang vhdl -o /group/techsup/parkerh/hls_video_block/solution1/syn/vhdl/hls_video_block 
+Execute       gen_rtl hls_video_block -istop -style xilinx -f -lang vlog -o /group/techsup/parkerh/hls_video_block/solution1/syn/verilog/hls_video_block 
+Execute       export_constraint_db -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl -f -tool general 
+Execute       report -model hls_video_block -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.design.xml -verbose -f -dv 
+Command       report done; 0.23 sec.
+Execute       report -model hls_video_block -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info hls_video_block -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block -p /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db 
+Execute       report -model hls_video_block -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/hls_video_block_csynth.rpt -f 
+Execute       report -model hls_video_block -o /group/techsup/parkerh/hls_video_block/solution1/syn/report/hls_video_block_csynth.xml -f -x 
+Execute       report -model hls_video_block -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.verbose.rpt -verbose -f 
+Command       report done; 0.15 sec.
+Execute       db_write -model hls_video_block -o /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.adb -f 
+Execute       sc_get_clocks hls_video_block 
+Execute       sc_get_portdomain hls_video_block 
+INFO-FLOW: Model list for RTL component generation: Block__proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor.1 Mat2AXIvideo hls_video_block
+INFO-FLOW: Handling components in module [Block_proc] ... 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [AXIvideo2Mat] ... 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+INFO-FLOW: Handling components in module [CvtColor] ... 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+INFO-FLOW: Found component hls_video_block_mbkb.
+INFO-FLOW: Append model hls_video_block_mbkb
+INFO-FLOW: Found component hls_video_block_mcud.
+INFO-FLOW: Append model hls_video_block_mcud
+INFO-FLOW: Found component hls_video_block_mdEe.
+INFO-FLOW: Append model hls_video_block_mdEe
+INFO-FLOW: Handling components in module [hls_2DFilter] ... 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+INFO-FLOW: Found component hls_2DFilter_lineeOg.
+INFO-FLOW: Append model hls_2DFilter_lineeOg
+INFO-FLOW: Handling components in module [CvtColor_1] ... 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+INFO-FLOW: Handling components in module [Mat2AXIvideo] ... 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+INFO-FLOW: Handling components in module [hls_video_block] ... 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+INFO-FLOW: Found component fifo_w11_d2_A.
+INFO-FLOW: Append model fifo_w11_d2_A
+INFO-FLOW: Found component fifo_w12_d2_A.
+INFO-FLOW: Append model fifo_w12_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w11_d2_A.
+INFO-FLOW: Append model fifo_w11_d2_A
+INFO-FLOW: Found component fifo_w12_d2_A.
+INFO-FLOW: Append model fifo_w12_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component start_for_CvtColog8j.
+INFO-FLOW: Append model start_for_CvtColog8j
+INFO-FLOW: Found component start_for_hls_2DFhbi.
+INFO-FLOW: Append model start_for_hls_2DFhbi
+INFO-FLOW: Found component start_for_CvtColoibs.
+INFO-FLOW: Append model start_for_CvtColoibs
+INFO-FLOW: Found component start_for_Mat2AXIjbC.
+INFO-FLOW: Append model start_for_Mat2AXIjbC
+INFO-FLOW: Append model Block_proc
+INFO-FLOW: Append model AXIvideo2Mat
+INFO-FLOW: Append model CvtColor
+INFO-FLOW: Append model hls_2DFilter
+INFO-FLOW: Append model CvtColor_1
+INFO-FLOW: Append model Mat2AXIvideo
+INFO-FLOW: Append model hls_video_block
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: hls_video_block_mbkb hls_video_block_mcud hls_video_block_mdEe hls_2DFilter_lineeOg fifo_w11_d2_A fifo_w12_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w11_d2_A fifo_w12_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A start_for_CvtColog8j start_for_hls_2DFhbi start_for_CvtColoibs start_for_Mat2AXIjbC Block_proc AXIvideo2Mat CvtColor hls_2DFilter CvtColor_1 Mat2AXIvideo hls_video_block
+INFO-FLOW: To file: write model hls_video_block_mbkb
+INFO-FLOW: To file: write model hls_video_block_mcud
+INFO-FLOW: To file: write model hls_video_block_mdEe
+INFO-FLOW: To file: write model hls_2DFilter_lineeOg
+INFO-FLOW: To file: write model fifo_w11_d2_A
+INFO-FLOW: To file: write model fifo_w12_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w11_d2_A
+INFO-FLOW: To file: write model fifo_w12_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model start_for_CvtColog8j
+INFO-FLOW: To file: write model start_for_hls_2DFhbi
+INFO-FLOW: To file: write model start_for_CvtColoibs
+INFO-FLOW: To file: write model start_for_Mat2AXIjbC
+INFO-FLOW: To file: write model Block_proc
+INFO-FLOW: To file: write model AXIvideo2Mat
+INFO-FLOW: To file: write model CvtColor
+INFO-FLOW: To file: write model hls_2DFilter
+INFO-FLOW: To file: write model CvtColor_1
+INFO-FLOW: To file: write model Mat2AXIvideo
+INFO-FLOW: To file: write model hls_video_block
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.14 sec.
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.14 sec.
+Command       ap_source done; 0.14 sec.
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Command       ap_source done; 0.18 sec.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'hls_2DFilter_lineeOg_ram (RAM)' using block RAMs.
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'input_mat_rows_V_c_U(fifo_w11_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'input_mat_cols_V_c_U(fifo_w12_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'input_mat_data_strea_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'input_mat_data_strea_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'input_mat_data_strea_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'input_mat_rows_V_c10_U(fifo_w11_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'input_mat_cols_V_c11_U(fifo_w12_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'im_1_data_stream_0_s_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'im_2_data_stream_0_s_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'output_mat_data_stre_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'output_mat_data_stre_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'output_mat_data_stre_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_CvtColog8j_U(start_for_CvtColog8j)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_hls_2DFhbi_U(start_for_hls_2DFhbi)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_CvtColoibs_U(start_for_CvtColoibs)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Mat2AXIjbC_U(start_for_Mat2AXIjbC)' using Shift Registers.
+Command       ap_source done; 0.57 sec.
+Execute       get_config_sdx -target 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.11 sec.
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.18 sec.
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.19 sec.
+Command       ap_source done; 0.19 sec.
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl 
+Execute       sc_get_clocks hls_video_block 
+Execute       source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:05 ; elapsed = 00:01:17 . Memory (MB): peak = 659.328 ; gain = 193.496 ; free physical = 67494 ; free virtual = 206907
+INFO: [SYSC 207-301] Generating SystemC RTL for hls_video_block.
+INFO: [VHDL 208-304] Generating VHDL RTL for hls_video_block.
+INFO: [VLOG 209-307] Generating Verilog RTL for hls_video_block.
+Command     autosyn done; 11.56 sec.
+Command   csynth_design done; 76.11 sec.
+Command ap_source done; 76.63 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /group/techsup/parkerh/hls_video_block/solution1 opened at Sun Dec 16 17:14:40 PST 2018
+Execute     config_clock -quiet -name default -period 3 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3ns.
+Execute     config_clock -quiet -name default -uncertainty 0.3 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.3ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.16 sec.
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.17 sec.
+Command     ap_source done; 0.17 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu7ev 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.39 sec.
+Execute   export_design -rtl verilog -format ip_catalog -library hls_vid -version 1.78 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.18 sec.
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.19 sec.
+Command     ap_source done; 0.19 sec.
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.13 sec.
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_2DFilter.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.compgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl 
+Execute     sc_get_clocks hls_video_block 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     get_config_sdx -profile 
+Execute     ::config_rtl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.rtl_wrap.cfg.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.constraint.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/hls_video_block.tbgen.tcl 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /group/techsup/parkerh/hls_video_block/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.14 sec.
+Execute         source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.15 sec.
+Command     ap_source done; 0.15 sec.
+Execute     source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /proj/gsd/vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command   export_design done; 24.75 sec.
+Command ap_source done; 25.15 sec.
+Execute cleanup_all 
