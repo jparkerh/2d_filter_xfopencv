@@ -1,8 +1,6 @@
 # HLS_2D_Filter
 Sobel filter example to demonstrate line/window buffer usage in HLS
 
-This is a rough example, no comments or documentation.
-
 The following applies to all files in this repository:
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
