@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hls_video_block.cpp" path="C:\Users\parkerh\Documents\2d_filter_xfopencv\hls_video_block.cpp"/>
+    <originFiles name="types_cv.h" path="C:\Users\parkerh\Documents\2d_filter_xfopencv\types_cv.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

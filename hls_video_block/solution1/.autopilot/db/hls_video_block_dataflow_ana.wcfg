@@ -22,338 +22,334 @@
    <wvobject type="group" fp_name="AESL_inst_hls_video_block_group">
       <obj_property name="label">AESL_inst_hls_video_block</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/AXIvideo2Mat_U0_activity">
-         <obj_property name="ElementShortName">AXIvideo2Mat_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">AXIvideo2Mat_U0_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/strm2mat_U0_activity">
+         <obj_property name="ElementShortName">strm2mat_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">strm2mat_U0_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/passthrough_U0_activity">
-         <obj_property name="ElementShortName">passthrough_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">passthrough_U0_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/rgb2gry_U0_activity">
+         <obj_property name="ElementShortName">rgb2gry_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">rgb2gry_U0_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/Mat2AXIvideo_U0_activity">
-         <obj_property name="ElementShortName">Mat2AXIvideo_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">Mat2AXIvideo_U0_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/hls_2DFilter_U0_activity">
+         <obj_property name="ElementShortName">hls_2DFilter_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">hls_2DFilter_U0_activity</obj_property>
       </wvobject>
-      <wvobject type="group" fp_name="AXIvideo2Mat_U0_group">
-         <obj_property name="label">AXIvideo2Mat_U0</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/gry2rgb_U0_activity">
+         <obj_property name="ElementShortName">gry2rgb_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">gry2rgb_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/mat2strm_U0_activity">
+         <obj_property name="ElementShortName">mat2strm_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">mat2strm_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="strm2mat_U0_group">
+         <obj_property name="label">strm2mat_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="AXIvideo2Mat_U0_Input_group">
+         <wvobject type="group" fp_name="strm2mat_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="AXIvideo2Mat_U0_Handshake_group">
+         <wvobject type="group" fp_name="strm2mat_U0_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/ap_start">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/ap_done">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/ap_continue">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/ap_continue">
                <obj_property name="ElementShortName">ap_continue</obj_property>
                <obj_property name="ObjectShortName">ap_continue</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="AXIvideo2Mat_U0_Output_group">
+         <wvobject type="group" fp_name="strm2mat_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="img_data_stream_0_V_group">
-               <obj_property name="label">img_data_stream_0_V(input_mat_data_strea_U, FIFO)</obj_property>
+            <wvobject type="group" fp_name="OUT_data_V_group">
+               <obj_property name="label">OUT_data_V(in_tmp_data_V_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_0_V_blk_n">
-                  <obj_property name="ElementShortName">img_data_stream_0_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_0_V_blk_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/OUT_data_V_blk_n">
+                  <obj_property name="ElementShortName">OUT_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">OUT_data_V_blk_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_0_V_din">
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/OUT_data_V_din">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_0_V_full_n">
-                  <obj_property name="ElementShortName">img_data_stream_0_V_full_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_0_V_full_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/OUT_data_V_full_n">
+                  <obj_property name="ElementShortName">OUT_data_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">OUT_data_V_full_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_0_V_write">
-                  <obj_property name="ElementShortName">img_data_stream_0_V_write</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_0_V_write</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="img_data_stream_1_V_group">
-               <obj_property name="label">img_data_stream_1_V(input_mat_data_strea_5_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_1_V_blk_n">
-                  <obj_property name="ElementShortName">img_data_stream_1_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_1_V_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_1_V_din">
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_1_V_full_n">
-                  <obj_property name="ElementShortName">img_data_stream_1_V_full_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_1_V_full_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_1_V_write">
-                  <obj_property name="ElementShortName">img_data_stream_1_V_write</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_1_V_write</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="img_data_stream_2_V_group">
-               <obj_property name="label">img_data_stream_2_V(input_mat_data_strea_6_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_2_V_blk_n">
-                  <obj_property name="ElementShortName">img_data_stream_2_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_2_V_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_2_V_din">
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_2_V_full_n">
-                  <obj_property name="ElementShortName">img_data_stream_2_V_full_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_2_V_full_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/AXIvideo2Mat_U0/img_data_stream_2_V_write">
-                  <obj_property name="ElementShortName">img_data_stream_2_V_write</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_2_V_write</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/strm2mat_U0/OUT_data_V_write">
+                  <obj_property name="ElementShortName">OUT_data_V_write</obj_property>
+                  <obj_property name="ObjectShortName">OUT_data_V_write</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="passthrough_U0_group">
-         <obj_property name="label">passthrough_U0</obj_property>
+      <wvobject type="group" fp_name="rgb2gry_U0_group">
+         <obj_property name="label">rgb2gry_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="passthrough_U0_Input_group">
+         <wvobject type="group" fp_name="rgb2gry_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="input_mat_data_strea_group">
-               <obj_property name="label">input_mat_data_strea(input_mat_data_strea_U, FIFO)</obj_property>
+            <wvobject type="group" fp_name="input_mat_data_V_group">
+               <obj_property name="label">input_mat_data_V(in_tmp_data_V_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_blk_n">
-                  <obj_property name="ElementShortName">input_mat_data_strea_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_blk_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/input_mat_data_V_blk_n">
+                  <obj_property name="ElementShortName">input_mat_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_blk_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_dout">
-                  <obj_property name="ElementShortName">input_mat_data_strea_dout[7:0]</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_dout[7:0]</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/input_mat_data_V_dout">
+                  <obj_property name="ElementShortName">input_mat_data_V_dout[23:0]</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_dout[23:0]</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_empty_n">
-                  <obj_property name="ElementShortName">input_mat_data_strea_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_empty_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/input_mat_data_V_empty_n">
+                  <obj_property name="ElementShortName">input_mat_data_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_empty_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_read">
-                  <obj_property name="ElementShortName">input_mat_data_strea_read</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_read</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="input_mat_data_strea_3_group">
-               <obj_property name="label">input_mat_data_strea_3(input_mat_data_strea_5_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_3_blk_n">
-                  <obj_property name="ElementShortName">input_mat_data_strea_3_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_3_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_3_dout">
-                  <obj_property name="ElementShortName">input_mat_data_strea_3_dout[7:0]</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_3_dout[7:0]</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_3_empty_n">
-                  <obj_property name="ElementShortName">input_mat_data_strea_3_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_3_empty_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_3_read">
-                  <obj_property name="ElementShortName">input_mat_data_strea_3_read</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_3_read</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="input_mat_data_strea_4_group">
-               <obj_property name="label">input_mat_data_strea_4(input_mat_data_strea_6_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_4_blk_n">
-                  <obj_property name="ElementShortName">input_mat_data_strea_4_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_4_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_4_dout">
-                  <obj_property name="ElementShortName">input_mat_data_strea_4_dout[7:0]</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_4_dout[7:0]</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_4_empty_n">
-                  <obj_property name="ElementShortName">input_mat_data_strea_4_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_4_empty_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/input_mat_data_strea_4_read">
-                  <obj_property name="ElementShortName">input_mat_data_strea_4_read</obj_property>
-                  <obj_property name="ObjectShortName">input_mat_data_strea_4_read</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/input_mat_data_V_read">
+                  <obj_property name="ElementShortName">input_mat_data_V_read</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_read</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="passthrough_U0_Handshake_group">
+         <wvobject type="group" fp_name="rgb2gry_U0_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/ap_start">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/ap_done">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/ap_continue">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/ap_continue">
                <obj_property name="ElementShortName">ap_continue</obj_property>
                <obj_property name="ObjectShortName">ap_continue</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="passthrough_U0_Output_group">
+         <wvobject type="group" fp_name="rgb2gry_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="output_mat_data_stre_group">
-               <obj_property name="label">output_mat_data_stre(output_mat_data_stre_U, FIFO)</obj_property>
+            <wvobject type="group" fp_name="output_mat_data_V_group">
+               <obj_property name="label">output_mat_data_V(im_1_data_V_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_blk_n">
-                  <obj_property name="ElementShortName">output_mat_data_stre_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_blk_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/output_mat_data_V_blk_n">
+                  <obj_property name="ElementShortName">output_mat_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_blk_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_din">
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/output_mat_data_V_din">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_full_n">
-                  <obj_property name="ElementShortName">output_mat_data_stre_full_n</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_full_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/output_mat_data_V_full_n">
+                  <obj_property name="ElementShortName">output_mat_data_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_full_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_write">
-                  <obj_property name="ElementShortName">output_mat_data_stre_write</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_write</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="output_mat_data_stre_3_group">
-               <obj_property name="label">output_mat_data_stre_3(output_mat_data_stre_5_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_3_blk_n">
-                  <obj_property name="ElementShortName">output_mat_data_stre_3_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_3_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_3_din">
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_3_full_n">
-                  <obj_property name="ElementShortName">output_mat_data_stre_3_full_n</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_3_full_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_3_write">
-                  <obj_property name="ElementShortName">output_mat_data_stre_3_write</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_3_write</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="output_mat_data_stre_4_group">
-               <obj_property name="label">output_mat_data_stre_4(output_mat_data_stre_6_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_4_blk_n">
-                  <obj_property name="ElementShortName">output_mat_data_stre_4_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_4_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_4_din">
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_4_full_n">
-                  <obj_property name="ElementShortName">output_mat_data_stre_4_full_n</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_4_full_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/passthrough_U0/output_mat_data_stre_4_write">
-                  <obj_property name="ElementShortName">output_mat_data_stre_4_write</obj_property>
-                  <obj_property name="ObjectShortName">output_mat_data_stre_4_write</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/rgb2gry_U0/output_mat_data_V_write">
+                  <obj_property name="ElementShortName">output_mat_data_V_write</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_write</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="Mat2AXIvideo_U0_group">
-         <obj_property name="label">Mat2AXIvideo_U0</obj_property>
+      <wvobject type="group" fp_name="hls_2DFilter_U0_group">
+         <obj_property name="label">hls_2DFilter_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="Mat2AXIvideo_U0_Input_group">
+         <wvobject type="group" fp_name="hls_2DFilter_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="img_data_stream_0_V_group">
-               <obj_property name="label">img_data_stream_0_V(output_mat_data_stre_U, FIFO)</obj_property>
+            <wvobject type="group" fp_name="input_mat_data_V_group">
+               <obj_property name="label">input_mat_data_V(im_1_data_V_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_0_V_blk_n">
-                  <obj_property name="ElementShortName">img_data_stream_0_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_0_V_blk_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/input_mat_data_V_blk_n">
+                  <obj_property name="ElementShortName">input_mat_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_blk_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_0_V_dout">
-                  <obj_property name="ElementShortName">img_data_stream_0_V_dout[7:0]</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_0_V_dout[7:0]</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/input_mat_data_V_dout">
+                  <obj_property name="ElementShortName">input_mat_data_V_dout[6:0]</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_dout[6:0]</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_0_V_empty_n">
-                  <obj_property name="ElementShortName">img_data_stream_0_V_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_0_V_empty_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/input_mat_data_V_empty_n">
+                  <obj_property name="ElementShortName">input_mat_data_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_empty_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_0_V_read">
-                  <obj_property name="ElementShortName">img_data_stream_0_V_read</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_0_V_read</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="img_data_stream_1_V_group">
-               <obj_property name="label">img_data_stream_1_V(output_mat_data_stre_5_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_1_V_blk_n">
-                  <obj_property name="ElementShortName">img_data_stream_1_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_1_V_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_1_V_dout">
-                  <obj_property name="ElementShortName">img_data_stream_1_V_dout[7:0]</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_1_V_dout[7:0]</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_1_V_empty_n">
-                  <obj_property name="ElementShortName">img_data_stream_1_V_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_1_V_empty_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_1_V_read">
-                  <obj_property name="ElementShortName">img_data_stream_1_V_read</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_1_V_read</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="img_data_stream_2_V_group">
-               <obj_property name="label">img_data_stream_2_V(output_mat_data_stre_6_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_2_V_blk_n">
-                  <obj_property name="ElementShortName">img_data_stream_2_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_2_V_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_2_V_dout">
-                  <obj_property name="ElementShortName">img_data_stream_2_V_dout[7:0]</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_2_V_dout[7:0]</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_2_V_empty_n">
-                  <obj_property name="ElementShortName">img_data_stream_2_V_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_2_V_empty_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/img_data_stream_2_V_read">
-                  <obj_property name="ElementShortName">img_data_stream_2_V_read</obj_property>
-                  <obj_property name="ObjectShortName">img_data_stream_2_V_read</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/input_mat_data_V_read">
+                  <obj_property name="ElementShortName">input_mat_data_V_read</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_read</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="Mat2AXIvideo_U0_Handshake_group">
+         <wvobject type="group" fp_name="hls_2DFilter_U0_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/ap_start">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/ap_done">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/Mat2AXIvideo_U0/ap_continue">
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/ap_continue">
                <obj_property name="ElementShortName">ap_continue</obj_property>
                <obj_property name="ObjectShortName">ap_continue</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="Mat2AXIvideo_U0_Output_group">
+         <wvobject type="group" fp_name="hls_2DFilter_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="output_mat_data_V_group">
+               <obj_property name="label">output_mat_data_V(im_2_data_V_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/output_mat_data_V_blk_n">
+                  <obj_property name="ElementShortName">output_mat_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/output_mat_data_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/output_mat_data_V_full_n">
+                  <obj_property name="ElementShortName">output_mat_data_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/hls_2DFilter_U0/output_mat_data_V_write">
+                  <obj_property name="ElementShortName">output_mat_data_V_write</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="gry2rgb_U0_group">
+         <obj_property name="label">gry2rgb_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="gry2rgb_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="input_mat_data_V_group">
+               <obj_property name="label">input_mat_data_V(im_2_data_V_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/input_mat_data_V_blk_n">
+                  <obj_property name="ElementShortName">input_mat_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/input_mat_data_V_dout">
+                  <obj_property name="ElementShortName">input_mat_data_V_dout[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_dout[0:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/input_mat_data_V_empty_n">
+                  <obj_property name="ElementShortName">input_mat_data_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/input_mat_data_V_read">
+                  <obj_property name="ElementShortName">input_mat_data_V_read</obj_property>
+                  <obj_property name="ObjectShortName">input_mat_data_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="gry2rgb_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="gry2rgb_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="output_mat_data_V_group">
+               <obj_property name="label">output_mat_data_V(out_tmp_data_V_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/output_mat_data_V_blk_n">
+                  <obj_property name="ElementShortName">output_mat_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/output_mat_data_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/output_mat_data_V_full_n">
+                  <obj_property name="ElementShortName">output_mat_data_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/gry2rgb_U0/output_mat_data_V_write">
+                  <obj_property name="ElementShortName">output_mat_data_V_write</obj_property>
+                  <obj_property name="ObjectShortName">output_mat_data_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="mat2strm_U0_group">
+         <obj_property name="label">mat2strm_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="mat2strm_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="IN_data_V_group">
+               <obj_property name="label">IN_data_V(out_tmp_data_V_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/IN_data_V_blk_n">
+                  <obj_property name="ElementShortName">IN_data_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">IN_data_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/IN_data_V_dout">
+                  <obj_property name="ElementShortName">IN_data_V_dout[16:0]</obj_property>
+                  <obj_property name="ObjectShortName">IN_data_V_dout[16:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/IN_data_V_empty_n">
+                  <obj_property name="ElementShortName">IN_data_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">IN_data_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/IN_data_V_read">
+                  <obj_property name="ElementShortName">IN_data_V_read</obj_property>
+                  <obj_property name="ObjectShortName">IN_data_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="mat2strm_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_video_block_top/AESL_inst_hls_video_block/mat2strm_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="mat2strm_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
          </wvobject>

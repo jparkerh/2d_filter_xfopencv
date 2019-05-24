@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vivado HLS Report for 'rgb2gry'
+================================================================
+* Date:           Fri May 24 15:46:24 2019
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        hls_video_block
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.246|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  921602|  921602|  921602|  921602|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |  921600|  921600|         2|          1|          1|  921600|    yes   |
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	4  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	2  / true
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.65>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i7* %output_mat_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %input_mat_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.65ns)   --->   "br label %.preheader" [hls_video_block.cpp:128]   --->   Operation 7 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 1.07>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i20 [ 0, %0 ], [ %indvar_flatten_next, %.preheader.preheader ]"   --->   Operation 8 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (1.07ns)   --->   "%exitcond_flatten = icmp eq i20 %indvar_flatten, -126976"   --->   Operation 9 'icmp' 'exitcond_flatten' <Predicate = true> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.89ns)   --->   "%indvar_flatten_next = add i20 %indvar_flatten, 1"   --->   Operation 10 'add' 'indvar_flatten_next' <Predicate = true> <Delay = 0.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten, label %1, label %.preheader.preheader"   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.24>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [hls_video_block.cpp:129]   --->   Operation 12 'specregionbegin' 'tmp_1' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [hls_video_block.cpp:130]   --->   Operation 13 'specpipeline' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (1.83ns)   --->   "%input_pixel_V = call i24 @_ssdm_op_Read.ap_fifo.volatile.i24P(i24* %input_mat_data_V)" [hls_video_block.cpp:131]   --->   Operation 14 'read' 'input_pixel_V' <Predicate = (!exitcond_flatten)> <Delay = 1.83> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 0> <FIFO>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = call i5 @_ssdm_op_PartSelect.i5.i24.i32.i32(i24 %input_pixel_V, i32 3, i32 7)" [hls_video_block.cpp:136]   --->   Operation 15 'partselect' 'tmp' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_3_cast = zext i5 %tmp to i6" [hls_video_block.cpp:136]   --->   Operation 16 'zext' 'tmp_3_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_2 = call i5 @_ssdm_op_PartSelect.i5.i24.i32.i32(i24 %input_pixel_V, i32 11, i32 15)" [hls_video_block.cpp:136]   --->   Operation 17 'partselect' 'tmp_2' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i5 %tmp_2 to i6" [hls_video_block.cpp:136]   --->   Operation 18 'zext' 'tmp_4_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_3 = call i5 @_ssdm_op_PartSelect.i5.i24.i32.i32(i24 %input_pixel_V, i32 19, i32 23)" [hls_video_block.cpp:136]   --->   Operation 19 'partselect' 'tmp_3' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i5 %tmp_3 to i7" [hls_video_block.cpp:136]   --->   Operation 20 'zext' 'tmp_5_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.78ns)   --->   "%tmp_6 = add i6 %tmp_3_cast, %tmp_4_cast" [hls_video_block.cpp:136]   --->   Operation 21 'add' 'tmp_6' <Predicate = (!exitcond_flatten)> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_6_cast = zext i6 %tmp_6 to i7" [hls_video_block.cpp:136]   --->   Operation 22 'zext' 'tmp_6_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.78ns)   --->   "%p_s = add i7 %tmp_6_cast, %tmp_5_cast" [hls_video_block.cpp:136]   --->   Operation 23 'add' 'p_s' <Predicate = (!exitcond_flatten)> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (1.83ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i7P(i7* %output_mat_data_V, i7 %p_s)" [hls_video_block.cpp:136]   --->   Operation 24 'write' <Predicate = (!exitcond_flatten)> <Delay = 1.83> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 0> <FIFO>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_1)" [hls_video_block.cpp:137]   --->   Operation 25 'specregionend' 'empty' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "br label %.preheader" [hls_video_block.cpp:129]   --->   Operation 26 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "ret void" [hls_video_block.cpp:139]   --->   Operation 27 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [7]  (0.656 ns)
+
+ <State 2>: 1.07ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [7]  (0 ns)
+	'icmp' operation ('exitcond_flatten') [8]  (1.07 ns)
+
+ <State 3>: 5.25ns
+The critical path consists of the following:
+	fifo read on port 'input_mat_data_V' (hls_video_block.cpp:131) [14]  (1.84 ns)
+	'add' operation ('tmp_6', hls_video_block.cpp:136) [21]  (0.789 ns)
+	'add' operation ('p_s', hls_video_block.cpp:136) [23]  (0.781 ns)
+	fifo write on port 'output_mat_data_V' (hls_video_block.cpp:136) [24]  (1.84 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

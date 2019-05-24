@@ -1,11 +1,16 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="hls_video_block" top="hls_video_block">
+<project xmlns="com.autoesl.autopilot.project" name="hls_video_block" top="hls_video_block">
     <includePaths/>
+    <libraryPaths/>
     <libraryFlag/>
-    <files>
-        <file name="hls_video_block.cpp" sc="0" tb="false" cflags=""/>
+    <Simulation>
+        <SimFlow name="csim"/>
+    </Simulation>
+    <files xmlns="">
+        <file name="types_cv.h" sc="0" tb="false" cflags="" blackbox="false"/>
+        <file name="hls_video_block.cpp" sc="0" tb="false" cflags="-IC:/xfOpenCV/include" blackbox="false"/>
     </files>
-    <solutions>
-        <solution name="solution1" status=""/>
+    <solutions xmlns="">
+        <solution name="solution1" status="active"/>
     </solutions>
-</AutoPilot:project>
+</project>
 
