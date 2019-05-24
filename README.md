@@ -1,4 +1,4 @@
-#2D_Filter: xfOpenCV
+<h1>2D_Filter: xfOpenCV</h1>
 Sobel filter example to demonstrate line/window buffer usage with xfOpenCV library
 
 The following applies to all files in this repository:
