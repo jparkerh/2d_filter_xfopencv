@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'hls_video_block'" level="0">
-<item name = "Date">Fri Nov 30 10:25:33 2018
+<item name = "Date">Fri May 24 15:46:26 2019
 </item>
-<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">hls_video_block</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynquplus</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 3.676, 1.25</column>
+<column name="ap_clk">10.00, 5.246, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">782643, 782643, 782644, 782644, dataflow</column>
+<column name="">2772814, 2772814, 1853774, 1853774, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

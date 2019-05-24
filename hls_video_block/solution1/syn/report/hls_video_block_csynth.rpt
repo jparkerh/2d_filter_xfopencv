@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'hls_video_block'
 ================================================================
-* Date:           Fri Nov 30 10:25:35 2018
+* Date:           Fri May 24 15:46:29 2019
 
-* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
 * Project:        hls_video_block
 * Solution:       solution1
 * Product family: zynquplus
@@ -20,28 +20,30 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|     3.676|        1.25|
+    |ap_clk  |  10.00|     5.246|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +--------+--------+--------+--------+----------+
-    |     Latency     |     Interval    | Pipeline |
-    |   min  |   max  |   min  |   max  |   Type   |
-    +--------+--------+--------+--------+----------+
-    |  782643|  782643|  782644|  782644| dataflow |
-    +--------+--------+--------+--------+----------+
+    +---------+---------+---------+---------+----------+
+    |      Latency      |      Interval     | Pipeline |
+    |   min   |   max   |   min   |   max   |   Type   |
+    +---------+---------+---------+---------+----------+
+    |  2772814|  2772814|  1853774|  1853774| dataflow |
+    +---------+---------+---------+---------+----------+
 
     + Detail: 
         * Instance: 
-        +-----------------+--------------+--------+--------+--------+--------+---------+
-        |                 |              |     Latency     |     Interval    | Pipeline|
-        |     Instance    |    Module    |   min  |   max  |   min  |   max  |   Type  |
-        +-----------------+--------------+--------+--------+--------+--------+---------+
-        |AXIvideo2Mat_U0  |AXIvideo2Mat  |  782643|  782643|  782643|  782643|   none  |
-        |Mat2AXIvideo_U0  |Mat2AXIvideo  |  780481|  780481|  780481|  780481|   none  |
-        |passthrough_U0   |passthrough   |  779041|  779041|  779041|  779041|   none  |
-        +-----------------+--------------+--------+--------+--------+--------+---------+
+        +-----------------+--------------+---------+---------+---------+---------+---------+
+        |                 |              |      Latency      |      Interval     | Pipeline|
+        |     Instance    |    Module    |   min   |   max   |   min   |   max   |   Type  |
+        +-----------------+--------------+---------+---------+---------+---------+---------+
+        |hls_2DFilter_U0  |hls_2DFilter  |  1853773|  1853773|  1853773|  1853773|   none  |
+        |mat2strm_U0      |mat2strm      |  1843201|  1843201|  1843201|  1843201|   none  |
+        |rgb2gry_U0       |rgb2gry       |   921602|   921602|   921602|   921602|   none  |
+        |strm2mat_U0      |strm2mat      |   921601|   921601|   921601|   921601|   none  |
+        |gry2rgb_U0       |gry2rgb       |   921602|   921602|   921602|   921602|   none  |
+        +-----------------+--------------+---------+---------+---------+---------+---------+
 
         * Loop: 
         N/A
@@ -56,18 +58,18 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
 +-----------------+---------+-------+--------+--------+-----+
 |DSP              |        -|      -|       -|       -|    -|
-|Expression       |        -|      -|       0|       2|    -|
-|FIFO             |        0|      -|      30|     120|    -|
-|Instance         |        -|      -|     435|    1002|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        4|      -|     316|     297|    -|
+|Instance         |        5|      -|     467|    1486|    -|
 |Memory           |        -|      -|       -|       -|    -|
 |Multiplexer      |        -|      -|       -|       -|    -|
 |Register         |        -|      -|       -|       -|    -|
 +-----------------+---------+-------+--------+--------+-----+
-|Total            |        0|      0|     465|    1124|    0|
+|Total            |        9|      0|     783|    1783|    0|
 +-----------------+---------+-------+--------+--------+-----+
 |Available        |     1824|   2520|  548160|  274080|    0|
 +-----------------+---------+-------+--------+--------+-----+
-|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
+|Utilization (%)  |    ~0   |      0|   ~0   |   ~0   |    0|
 +-----------------+---------+-------+--------+--------+-----+
 
 + Detail: 
@@ -75,11 +77,13 @@
     +-----------------+--------------+---------+-------+-----+-----+
     |     Instance    |    Module    | BRAM_18K| DSP48E|  FF | LUT |
     +-----------------+--------------+---------+-------+-----+-----+
-    |AXIvideo2Mat_U0  |AXIvideo2Mat  |        0|      0|  264|  458|
-    |Mat2AXIvideo_U0  |Mat2AXIvideo  |        0|      0|  135|  368|
-    |passthrough_U0   |passthrough   |        0|      0|   36|  176|
+    |gry2rgb_U0       |gry2rgb       |        0|      0|   28|  140|
+    |hls_2DFilter_U0  |hls_2DFilter  |        5|      0|  219|  780|
+    |mat2strm_U0      |mat2strm      |        0|      0|  114|  236|
+    |rgb2gry_U0       |rgb2gry       |        0|      0|   28|  168|
+    |strm2mat_U0      |strm2mat      |        0|      0|   78|  162|
     +-----------------+--------------+---------+-------+-----+-----+
-    |Total            |              |        0|      0|  435| 1002|
+    |Total            |              |        5|      0|  467| 1486|
     +-----------------+--------------+---------+-------+-----+-----+
 
     * DSP48: 
@@ -89,27 +93,19 @@
     N/A
 
     * FIFO: 
-    +--------------------------+---------+---+----+------+-----+---------+
-    |           Name           | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
-    +--------------------------+---------+---+----+------+-----+---------+
-    |input_mat_data_strea_5_U  |        0|  5|  20|     2|    8|       16|
-    |input_mat_data_strea_6_U  |        0|  5|  20|     2|    8|       16|
-    |input_mat_data_strea_U    |        0|  5|  20|     2|    8|       16|
-    |output_mat_data_stre_5_U  |        0|  5|  20|     2|    8|       16|
-    |output_mat_data_stre_6_U  |        0|  5|  20|     2|    8|       16|
-    |output_mat_data_stre_U    |        0|  5|  20|     2|    8|       16|
-    +--------------------------+---------+---+----+------+-----+---------+
-    |Total                     |        0| 30| 120|    12|   48|       96|
-    +--------------------------+---------+---+----+------+-----+---------+
+    +------------------+---------+-----+-----+------+-----+---------+
+    |       Name       | BRAM_18K|  FF | LUT | Depth| Bits| Size:D*B|
+    +------------------+---------+-----+-----+------+-----+---------+
+    |im_1_data_V_U     |        1|   27|   34|   100|    7|      700|
+    |im_2_data_V_U     |        0|  208|  167|   100|    1|      100|
+    |in_tmp_data_V_U   |        2|   44|   52|   100|   24|     2400|
+    |out_tmp_data_V_U  |        1|   37|   44|   100|   17|     1700|
+    +------------------+---------+-----+-----+------+-----+---------+
+    |Total             |        4|  316|  297|   400|   49|     4900|
+    +------------------+---------+-----+-----+------+-----+---------+
 
     * Expression: 
-    +--------------+----------+-------+---+----+------------+------------+
-    | Variable Name| Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +--------------+----------+-------+---+----+------------+------------+
-    |ap_idle       |    and   |      0|  0|   2|           1|           1|
-    +--------------+----------+-------+---+----+------------+------------+
-    |Total         |          |      0|  0|   2|           1|           1|
-    +--------------+----------+-------+---+----+------------+------------+
+    N/A
 
     * Multiplexer: 
     N/A
@@ -123,32 +119,28 @@
 == Interface
 ================================================================
 * Summary: 
-+----------------------+-----+-----+------------+--------------------+--------------+
-|       RTL Ports      | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
-+----------------------+-----+-----+------------+--------------------+--------------+
-|INPUT_STREAM_TDATA    |  in |   32|    axis    |  VIDEO_IN_V_data_V |    pointer   |
-|INPUT_STREAM_TKEEP    |  in |    4|    axis    |  VIDEO_IN_V_keep_V |    pointer   |
-|INPUT_STREAM_TSTRB    |  in |    4|    axis    |  VIDEO_IN_V_strb_V |    pointer   |
-|INPUT_STREAM_TUSER    |  in |    1|    axis    |  VIDEO_IN_V_user_V |    pointer   |
-|INPUT_STREAM_TLAST    |  in |    1|    axis    |  VIDEO_IN_V_last_V |    pointer   |
-|INPUT_STREAM_TID      |  in |    1|    axis    |   VIDEO_IN_V_id_V  |    pointer   |
-|INPUT_STREAM_TDEST    |  in |    1|    axis    |  VIDEO_IN_V_dest_V |    pointer   |
-|INPUT_STREAM_TVALID   |  in |    1|    axis    |  VIDEO_IN_V_dest_V |    pointer   |
-|INPUT_STREAM_TREADY   | out |    1|    axis    |  VIDEO_IN_V_dest_V |    pointer   |
-|OUTPUT_STREAM_TDATA   | out |   32|    axis    | VIDEO_OUT_V_data_V |    pointer   |
-|OUTPUT_STREAM_TKEEP   | out |    4|    axis    | VIDEO_OUT_V_keep_V |    pointer   |
-|OUTPUT_STREAM_TSTRB   | out |    4|    axis    | VIDEO_OUT_V_strb_V |    pointer   |
-|OUTPUT_STREAM_TUSER   | out |    1|    axis    | VIDEO_OUT_V_user_V |    pointer   |
-|OUTPUT_STREAM_TLAST   | out |    1|    axis    | VIDEO_OUT_V_last_V |    pointer   |
-|OUTPUT_STREAM_TID     | out |    1|    axis    |  VIDEO_OUT_V_id_V  |    pointer   |
-|OUTPUT_STREAM_TDEST   | out |    1|    axis    | VIDEO_OUT_V_dest_V |    pointer   |
-|OUTPUT_STREAM_TVALID  | out |    1|    axis    | VIDEO_OUT_V_dest_V |    pointer   |
-|OUTPUT_STREAM_TREADY  |  in |    1|    axis    | VIDEO_OUT_V_dest_V |    pointer   |
-|ap_clk                |  in |    1| ap_ctrl_hs |   hls_video_block  | return value |
-|ap_rst_n              |  in |    1| ap_ctrl_hs |   hls_video_block  | return value |
-|ap_done               | out |    1| ap_ctrl_hs |   hls_video_block  | return value |
-|ap_start              |  in |    1| ap_ctrl_hs |   hls_video_block  | return value |
-|ap_ready              | out |    1| ap_ctrl_hs |   hls_video_block  | return value |
-|ap_idle               | out |    1| ap_ctrl_hs |   hls_video_block  | return value |
-+----------------------+-----+-----+------------+--------------------+--------------+
++----------------------+-----+-----+--------------+--------------------+--------------+
+|       RTL Ports      | Dir | Bits|   Protocol   |    Source Object   |    C Type    |
++----------------------+-----+-----+--------------+--------------------+--------------+
+|INPUT_STREAM_TDATA    |  in |   24|     axis     |  VIDEO_IN_V_data_V |    pointer   |
+|INPUT_STREAM_TKEEP    |  in |    3|     axis     |  VIDEO_IN_V_keep_V |    pointer   |
+|INPUT_STREAM_TSTRB    |  in |    3|     axis     |  VIDEO_IN_V_strb_V |    pointer   |
+|INPUT_STREAM_TUSER    |  in |    1|     axis     |  VIDEO_IN_V_user_V |    pointer   |
+|INPUT_STREAM_TLAST    |  in |    1|     axis     |  VIDEO_IN_V_last_V |    pointer   |
+|INPUT_STREAM_TID      |  in |    1|     axis     |   VIDEO_IN_V_id_V  |    pointer   |
+|INPUT_STREAM_TDEST    |  in |    1|     axis     |  VIDEO_IN_V_dest_V |    pointer   |
+|INPUT_STREAM_TVALID   |  in |    1|     axis     |  VIDEO_IN_V_dest_V |    pointer   |
+|INPUT_STREAM_TREADY   | out |    1|     axis     |  VIDEO_IN_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TDATA   | out |   24|     axis     | VIDEO_OUT_V_data_V |    pointer   |
+|OUTPUT_STREAM_TKEEP   | out |    3|     axis     | VIDEO_OUT_V_keep_V |    pointer   |
+|OUTPUT_STREAM_TSTRB   | out |    3|     axis     | VIDEO_OUT_V_strb_V |    pointer   |
+|OUTPUT_STREAM_TUSER   | out |    1|     axis     | VIDEO_OUT_V_user_V |    pointer   |
+|OUTPUT_STREAM_TLAST   | out |    1|     axis     | VIDEO_OUT_V_last_V |    pointer   |
+|OUTPUT_STREAM_TID     | out |    1|     axis     |  VIDEO_OUT_V_id_V  |    pointer   |
+|OUTPUT_STREAM_TDEST   | out |    1|     axis     | VIDEO_OUT_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TVALID  | out |    1|     axis     | VIDEO_OUT_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TREADY  |  in |    1|     axis     | VIDEO_OUT_V_dest_V |    pointer   |
+|ap_clk                |  in |    1| ap_ctrl_none |   hls_video_block  | return value |
+|ap_rst_n              |  in |    1| ap_ctrl_none |   hls_video_block  | return value |
++----------------------+-----+-----+--------------+--------------------+--------------+
 
